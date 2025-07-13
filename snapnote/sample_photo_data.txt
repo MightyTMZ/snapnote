@@ -1,0 +1,6 @@
+ LOG  Photo: {
+  "format": ".jpg",
+  "height": 4080,
+  "uri": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252Fsnapnote-7227a804-b227-4894-9dd0-50f5339f1061/Camera/ccd7f1a2-03b6-45c5-b1ab-b55266e74bf7.jpg",
+  "width": 3072
+}

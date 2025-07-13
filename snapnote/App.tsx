@@ -17,7 +17,7 @@ export default function App() {
   const [uri, setUri] = useState<string | null>(null);
   // const [mode, setMode] = useState<CameraMode>("picture");
   const [facing, setFacing] = useState<CameraType>("back");
-  const [recording, setRecording] = useState(false);
+  // const [recording, setRecording] = useState(false);
 
   if (!permission) {
     return null;
@@ -37,18 +37,19 @@ export default function App() {
   const takePicture = async () => {
     const photo = await ref.current?.takePictureAsync();
     setUri(photo?.uri);
+    console.log("Photo: " + JSON.stringify(photo, null, 2));
   };
 
-  const recordVideo = async () => {
-    if (recording) {
-      setRecording(false);
-      ref.current?.stopRecording();
-      return;
-    }
-    setRecording(true);
-    const video = await ref.current?.recordAsync();
-    console.log({ video });
-  };
+  // const recordVideo = async () => {
+  //   if (recording) {
+  //     setRecording(false);
+  //     ref.current?.stopRecording();
+  //     return;
+  //   }
+  //   setRecording(true);
+  //   const video = await ref.current?.recordAsync();
+  //   console.log({ video });
+  // };
 
   // const toggleMode = () => {
   //   setMode((prev) => (prev === "picture" ? "video" : "picture"));
